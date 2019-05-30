@@ -1,5 +1,5 @@
 ---
-- name: This playbook is to connect to remote and start apache2 service
+- name: This playbook is to connect to remote and start apache2 service in ubuntu
   hosts: 192.168.56.110
   become: root
   gather_facts: true

@@ -1,6 +1,6 @@
 ---
-- name: This playbook is to connect to remote and start apache2 service in ubuntu 14.2
-  hosts: 192.168.56.110
+- name: This playbook is to connect to remote and restart apache2 service on ubuntu 14.2
+  hosts: 192.168.56.103
   become: root
   gather_facts: true
   
@@ -14,5 +14,5 @@
     - name: run if is not running
       service:
          name: apache2
-         status: service apache2 start
+         status: service apache2 restart
       when: 'status_of_apache2.state is not running' 
